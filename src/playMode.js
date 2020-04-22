@@ -81,49 +81,365 @@ function choosingName() {
             }
         }
         
-    }
-/*
     } else if (document.querySelector('.active').innerHTML === 'Action (set B)') {
-        for (let i = 0; i < 9; i++) {
-            document.querySelector(`.blocks a:nth-child(${i + 1})`).innerHTML =  setBarray[i];
-            createImage(i + 1);
-            rotateBlock(i + 1);
+        let resultArray = [];
+        let numberResult = 1;
+        game(2, 1, 1);
+
+        function game(pos, next, numberR) {
+            if (numberResult <= 5) {
+                let sound = document.createElement('audio');
+                sound.src = `./src/sound/${setBarray[pos]}.mp3`;
+                sound.play();
+                document.querySelector('.blocks').addEventListener('click', (e) => {
+                    if(e.target.style.backgroundImage.includes(setBarray[pos])) {
+                        document.querySelector(`#result div:nth-child(${numberR})`).style.background = 'yellow';
+                        let sound = document.createElement('audio');
+                        sound.src = `./src/sound/correct.mp3`;
+                        sound.play();
+                        resultArray.push(1);
+                        numberResult = numberResult + 1;
+                        game(next, pos + 1, numberR + 1);
+                    } else {
+                        document.querySelector(`#result div:nth-child(${numberR})`).style.background = 'red';
+                        let sound = document.createElement('audio');
+                        sound.src = `./src/sound/failure.mp3`;
+                        sound.play();
+                        numberResult = numberResult + 1;
+                        game(next, pos + 1, numberR + 1);
+                    }
+                })
+            }
         }
+        console.log(numberResult);
+        console.log(resultArray);
+        if(numberResult >= 5) {
+            if(resultArray.length === 5) {
+                document.querySelector('.blocks__square').style.display = 'none';
+                let icon = document.createElement('img');
+                icon.src = `./src/images/success.jpg`;
+                icon.className = 'resultIcon';
+                document.querySelector('.blocks').appendChild(icon);
+                let sound = document.createElement('audio');
+                sound.src = `./src/sound/success.mp3`;
+                sound.play();
+            } else if (resultArray.length < 5) {
+                document.querySelector('.blocks__square').style.display = 'none';
+                let icon = document.createElement('img');
+                icon.className = 'resultIcon';
+                icon.src = `./src/images/failure.jpg`;
+                document.querySelector('.blocks').appendChild(icon);
+                let sound = document.createElement('audio');
+                sound.src = `./src/sound/failure.mp3`;
+                sound.play();
+            }
+        }
+        
     } else if (document.querySelector('.active').innerHTML === 'Action (set C)') {
-        for (let i = 0; i < 9; i++) {
-            document.querySelector(`.blocks a:nth-child(${i + 1})`).innerHTML =  setCarray[i];
-            createImage(i + 1);
-            rotateBlock(i + 1);
+        let resultArray = [];
+        let numberResult = 1;
+        game(2, 1, 1);
+
+        function game(pos, next, numberR) {
+            if (numberResult <= 5) {
+                let sound = document.createElement('audio');
+                sound.src = `./src/sound/${setCarray[pos]}.mp3`;
+                sound.play();
+                document.querySelector('.blocks').addEventListener('click', (e) => {
+                    if(e.target.style.backgroundImage.includes(setCarray[pos])) {
+                        document.querySelector(`#result div:nth-child(${numberR})`).style.background = 'yellow';
+                        let sound = document.createElement('audio');
+                        sound.src = `./src/sound/correct.mp3`;
+                        sound.play();
+                        resultArray.push(1);
+                        numberResult = numberResult + 1;
+                        game(next, pos + 1, numberR + 1);
+                    } else {
+                        document.querySelector(`#result div:nth-child(${numberR})`).style.background = 'red';
+                        let sound = document.createElement('audio');
+                        sound.src = `./src/sound/failure.mp3`;
+                        sound.play();
+                        numberResult = numberResult + 1;
+                        game(next, pos + 1, numberR + 1);
+                    }
+                })
+            }
+        }
+        if(numberResult >= 5) {
+            if(resultArray.length === 5) {
+                document.querySelector('.blocks__square').style.display = 'none';
+                let icon = document.createElement('img');
+                icon.src = `./src/images/success.jpg`;
+                icon.className = 'resultIcon';
+                document.querySelector('.blocks').appendChild(icon);
+                let sound = document.createElement('audio');
+                sound.src = `./src/sound/success.mp3`;
+                sound.play();
+            } else if (resultArray.length < 5) {
+                document.querySelector('.blocks__square').style.display = 'none';
+                let icon = document.createElement('img');
+                icon.className = 'resultIcon';
+                icon.src = `./src/images/failure.jpg`;
+                document.querySelector('.blocks').appendChild(icon);
+                let sound = document.createElement('audio');
+                sound.src = `./src/sound/failure.mp3`;
+                sound.play();
+            }
         }
     } else if (document.querySelector('.active').innerHTML === 'Adjective') {
-        for (let i = 0; i < 9; i++) {
-            document.querySelector(`.blocks a:nth-child(${i + 1})`).innerHTML =  adjectiveArray[i];
-            createImage(i + 1);
-            rotateBlock(i + 1);
+        let resultArray = [];
+        let numberResult = 1;
+        game(2, 1, 1);
+
+        function game(pos, next, numberR) {
+            if (numberResult <= 5) {
+                let sound = document.createElement('audio');
+                sound.src = `./src/sound/${adjectiveArray[pos]}.mp3`;
+                sound.play();
+                document.querySelector('.blocks').addEventListener('click', (e) => {
+                    if(e.target.style.backgroundImage.includes(adjectiveArray[pos])) {
+                        document.querySelector(`#result div:nth-child(${numberR})`).style.background = 'yellow';
+                        let sound = document.createElement('audio');
+                        sound.src = `./src/sound/correct.mp3`;
+                        sound.play();
+                        resultArray.push(1);
+                        numberResult = numberResult + 1;
+                        game(next, pos + 1, numberR + 1);
+                    } else {
+                        document.querySelector(`#result div:nth-child(${numberR})`).style.background = 'red';
+                        let sound = document.createElement('audio');
+                        sound.src = `./src/sound/failure.mp3`;
+                        sound.play();
+                        numberResult = numberResult + 1;
+                        game(next, pos + 1, numberR + 1);
+                    }
+                })
+            }
+        }
+        if(numberResult >= 5) {
+            if(resultArray.length === 5) {
+                document.querySelector('.blocks__square').style.display = 'none';
+                let icon = document.createElement('img');
+                icon.src = `./src/images/success.jpg`;
+                icon.className = 'resultIcon';
+                document.querySelector('.blocks').appendChild(icon);
+                let sound = document.createElement('audio');
+                sound.src = `./src/sound/success.mp3`;
+                sound.play();
+            } else if (resultArray.length < 5) {
+                document.querySelector('.blocks__square').style.display = 'none';
+                let icon = document.createElement('img');
+                icon.className = 'resultIcon';
+                icon.src = `./src/images/failure.jpg`;
+                document.querySelector('.blocks').appendChild(icon);
+                let sound = document.createElement('audio');
+                sound.src = `./src/sound/failure.mp3`;
+                sound.play();
+            }
         }
     } else if (document.querySelector('.active').innerHTML === 'Animal (set A)') {
-        for (let i = 0; i < 9; i++) {
-            document.querySelector(`.blocks a:nth-child(${i + 1})`).innerHTML =  setAanimalArray[i];
-            createImage(i + 1);
-            rotateBlock(i + 1);
+        let resultArray = [];
+        let numberResult = 1;
+        game(2, 1, 1);
+
+        function game(pos, next, numberR) {
+            if (numberResult <= 5) {
+                let sound = document.createElement('audio');
+                sound.src = `./src/sound/${setAanimalArray[pos]}.mp3`;
+                sound.play();
+                document.querySelector('.blocks').addEventListener('click', (e) => {
+                    if(e.target.style.backgroundImage.includes(setAanimalArray[pos])) {
+                        document.querySelector(`#result div:nth-child(${numberR})`).style.background = 'yellow';
+                        let sound = document.createElement('audio');
+                        sound.src = `./src/sound/correct.mp3`;
+                        sound.play();
+                        resultArray.push(1);
+                        numberResult = numberResult + 1;
+                        game(next, pos + 1, numberR + 1);
+                    } else {
+                        document.querySelector(`#result div:nth-child(${numberR})`).style.background = 'red';
+                        let sound = document.createElement('audio');
+                        sound.src = `./src/sound/failure.mp3`;
+                        sound.play();
+                        numberResult = numberResult + 1;
+                        game(next, pos + 1, numberR + 1);
+                    }
+                })
+            }
+        }
+        if(numberResult >= 5) {
+            if(resultArray.length === 5) {
+                document.querySelector('.blocks__square').style.display = 'none';
+                let icon = document.createElement('img');
+                icon.src = `./src/images/success.jpg`;
+                icon.className = 'resultIcon';
+                document.querySelector('.blocks').appendChild(icon);
+                let sound = document.createElement('audio');
+                sound.src = `./src/sound/success.mp3`;
+                sound.play();
+            } else if (resultArray.length < 5) {
+                document.querySelector('.blocks__square').style.display = 'none';
+                let icon = document.createElement('img');
+                icon.className = 'resultIcon';
+                icon.src = `./src/images/failure.jpg`;
+                document.querySelector('.blocks').appendChild(icon);
+                let sound = document.createElement('audio');
+                sound.src = `./src/sound/failure.mp3`;
+                sound.play();
+            }
         }
     } else if (document.querySelector('.active').innerHTML === 'Animal (set B)') {
-        for (let i = 0; i < 9; i++) {
-            document.querySelector(`.blocks a:nth-child(${i + 1})`).innerHTML =  setBanimalArray[i];
-            createImage(i + 1);
-            rotateBlock(i + 1);
+        let resultArray = [];
+        let numberResult = 1;
+        game(2, 1, 1);
+
+        function game(pos, next, numberR) {
+            if (numberResult <= 5) {
+                let sound = document.createElement('audio');
+                sound.src = `./src/sound/${setBanimalArray[pos]}.mp3`;
+                sound.play();
+                document.querySelector('.blocks').addEventListener('click', (e) => {
+                    if(e.target.style.backgroundImage.includes(setBanimalArray[pos])) {
+                        document.querySelector(`#result div:nth-child(${numberR})`).style.background = 'yellow';
+                        let sound = document.createElement('audio');
+                        sound.src = `./src/sound/correct.mp3`;
+                        sound.play();
+                        resultArray.push(1);
+                        numberResult = numberResult + 1;
+                        game(next, pos + 1, numberR + 1);
+                    } else {
+                        document.querySelector(`#result div:nth-child(${numberR})`).style.background = 'red';
+                        let sound = document.createElement('audio');
+                        sound.src = `./src/sound/failure.mp3`;
+                        sound.play();
+                        numberResult = numberResult + 1;
+                        game(next, pos + 1, numberR + 1);
+                    }
+                })
+            }
+        }
+        if(numberResult >= 5) {
+            if(resultArray.length === 5) {
+                document.querySelector('.blocks__square').style.display = 'none';
+                let icon = document.createElement('img');
+                icon.src = `./src/images/success.jpg`;
+                icon.className = 'resultIcon';
+                document.querySelector('.blocks').appendChild(icon);
+                let sound = document.createElement('audio');
+                sound.src = `./src/sound/success.mp3`;
+                sound.play();
+            } else if (resultArray.length < 5) {
+                document.querySelector('.blocks__square').style.display = 'none';
+                let icon = document.createElement('img');
+                icon.className = 'resultIcon';
+                icon.src = `./src/images/failure.jpg`;
+                document.querySelector('.blocks').appendChild(icon);
+                let sound = document.createElement('audio');
+                sound.src = `./src/sound/failure.mp3`;
+                sound.play();
+            }
         }
     } else if (document.querySelector('.active').innerHTML === 'Clothes') {
-        for (let i = 0; i < 9; i++) {
-            document.querySelector(`.blocks a:nth-child(${i + 1})`).innerHTML =  clothesArray[i];
-            createImage(i + 1);
-            rotateBlock(i + 1);
+        let resultArray = [];
+        let numberResult = 1;
+        game(2, 1, 1);
+
+        function game(pos, next, numberR) {
+            if (numberResult <= 5) {
+                let sound = document.createElement('audio');
+                sound.src = `./src/sound/${clothesArray[pos]}.mp3`;
+                sound.play();
+                document.querySelector('.blocks').addEventListener('click', (e) => {
+                    if(e.target.style.backgroundImage.includes(clothesArray[pos])) {
+                        document.querySelector(`#result div:nth-child(${numberR})`).style.background = 'yellow';
+                        let sound = document.createElement('audio');
+                        sound.src = `./src/sound/correct.mp3`;
+                        sound.play();
+                        resultArray.push(1);
+                        numberResult = numberResult + 1;
+                        game(next, pos + 1, numberR + 1);
+                    } else {
+                        document.querySelector(`#result div:nth-child(${numberR})`).style.background = 'red';
+                        let sound = document.createElement('audio');
+                        sound.src = `./src/sound/failure.mp3`;
+                        sound.play();
+                        numberResult = numberResult + 1;
+                        game(next, pos + 1, numberR + 1);
+                    }
+                })
+            }
+        }
+        if(numberResult >= 5) {
+            if(resultArray.length === 5) {
+                document.querySelector('.blocks__square').style.display = 'none';
+                let icon = document.createElement('img');
+                icon.src = `./src/images/success.jpg`;
+                icon.className = 'resultIcon';
+                document.querySelector('.blocks').appendChild(icon);
+                let sound = document.createElement('audio');
+                sound.src = `./src/sound/success.mp3`;
+                sound.play();
+            } else if (resultArray.length < 5) {
+                document.querySelector('.blocks__square').style.display = 'none';
+                let icon = document.createElement('img');
+                icon.className = 'resultIcon';
+                icon.src = `./src/images/failure.jpg`;
+                document.querySelector('.blocks').appendChild(icon);
+                let sound = document.createElement('audio');
+                sound.src = `./src/sound/failure.mp3`;
+                sound.play();
+            }
         }
     } else if (document.querySelector('.active').innerHTML === 'Emotion') {
-        for (let i = 0; i < 9; i++) {
-            document.querySelector(`.blocks a:nth-child(${i + 1})`).innerHTML =  emotionArray[i];
-            createImage(i + 1);
-            rotateBlock(i + 1);
+        let resultArray = [];
+        let numberResult = 1;
+        game(2, 1, 1);
+
+        function game(pos, next, numberR) {
+            if (numberResult <= 5) {
+                let sound = document.createElement('audio');
+                sound.src = `./src/sound/${emotionArray[pos]}.mp3`;
+                sound.play();
+                document.querySelector('.blocks').addEventListener('click', (e) => {
+                    if(e.target.style.backgroundImage.includes(emotionArray[pos])) {
+                        document.querySelector(`#result div:nth-child(${numberR})`).style.background = 'yellow';
+                        let sound = document.createElement('audio');
+                        sound.src = `./src/sound/correct.mp3`;
+                        sound.play();
+                        resultArray.push(1);
+                        numberResult = numberResult + 1;
+                        game(next, pos + 1, numberR + 1);
+                    } else {
+                        document.querySelector(`#result div:nth-child(${numberR})`).style.background = 'red';
+                        let sound = document.createElement('audio');
+                        sound.src = `./src/sound/failure.mp3`;
+                        sound.play();
+                        numberResult = numberResult + 1;
+                        game(next, pos + 1, numberR + 1);
+                    }
+                })
+            }
         }
-    }*/
+        if(numberResult >= 5) {
+            if(resultArray.length === 5) {
+                document.querySelector('.blocks__square').style.display = 'none';
+                let icon = document.createElement('img');
+                icon.src = `./src/images/success.jpg`;
+                icon.className = 'resultIcon';
+                document.querySelector('.blocks').appendChild(icon);
+                let sound = document.createElement('audio');
+                sound.src = `./src/sound/success.mp3`;
+                sound.play();
+            } else if (resultArray.length < 5) {
+                document.querySelector('.blocks__square').style.display = 'none';
+                let icon = document.createElement('img');
+                icon.className = 'resultIcon';
+                icon.src = `./src/images/failure.jpg`;
+                document.querySelector('.blocks').appendChild(icon);
+                let sound = document.createElement('audio');
+                sound.src = `./src/sound/failure.mp3`;
+                sound.play();
+            }
+        }
+    }
 }
