@@ -1,28 +1,29 @@
 {
-  "name": "anatolijdm-rs2019q3",
+  "name": "english-for-kids",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "path": "^0.12.7",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
   "scripts": {
     "dev": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rolling-scopes-school/anatolijdm-RS2019Q3.git"
+    "url": "git+https://github.com/AnatolijDm/English-for-kids.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rolling-scopes-school/anatolijdm-RS2019Q3/issues"
+    "url": "https://github.com/AnatolijDm/English-for-kids/issues"
   },
-  "homepage": "https://github.com/rolling-scopes-school/anatolijdm-RS2019Q3#readme",
-  "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.1.0",
-    "path": "^0.12.7",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
-  }
+  "homepage": "https://github.com/AnatolijDm/English-for-kids#readme"
 }
