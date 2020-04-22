@@ -1,0 +1,275 @@
+.wrapper {
+  max-width: 1080px;
+  margin: auto;
+}
+
+header {
+  height: 50px;
+}
+
+.menu {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu_icon {
+  width: 35px;
+  height: 35px;
+  z-index: 4;
+  background-image: url("./images/menu-icon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.play_box {
+  width: 100px;
+  height: 40px;
+  border: 3px solid #969494;
+  border-radius: 10%;
+  background: -webkit-gradient(linear, left top, right top, from(#29ac6f), to(#178686));
+  background: linear-gradient(to right, #29ac6f 0%, #178686 100%);
+  color: white;
+  font-size: 17px;
+  font-family: Arial, Helvetica, serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+  padding-right: 5px;
+}
+
+.play_box__button {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #e7e4e4;
+  border-radius: 15%;
+}
+
+.play-train {
+  text-decoration: none;
+}
+
+.blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.blocks > a:nth-child(1) > p {
+  color: red;
+}
+
+.blocks__square {
+  width: 305px;
+  height: 60px;
+  border: 1px solid #d6d2d2;
+  border-radius: 3%;
+  margin: 20px 25px;
+  text-align: center;
+  padding-top: 215px;
+  font-size: 25px;
+  font-family: Arial, Helvetica, serif;
+  text-decoration: none;
+  color: black;
+  background: -webkit-gradient(linear, left bottom, left top, from(#f1f38a), to(#f34343));
+  background: linear-gradient(to top, #f1f38a 0%, #f34343 100%);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 305px 225px;
+  z-index: 1;
+}
+
+.blocks__square:hover {
+  -webkit-animation: square_button 1s;
+          animation: square_button 1s;
+  -webkit-box-shadow: 0px 15px 20px gray;
+          box-shadow: 0px 15px 20px gray;
+}
+
+.hidden_menu {
+  margin-top: -86px;
+  padding-top: 120px;
+  padding-bottom: 50px;
+  position: absolute;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 300px;
+  height: 600px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid green;
+  background: -webkit-gradient(linear, left top, right top, from(#29ac6f), to(#178686));
+  background: linear-gradient(to right, #29ac6f 0%, #178686 100%);
+  z-index: 3;
+}
+
+.hidden_menu a {
+  font-size: 20px;
+  font-family: Arial, Helvetica, serif;
+  text-decoration: none;
+  color: white;
+}
+
+.hidden_menu .active {
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+.rotate {
+  display: inline-block;
+  width: 40px;
+  position: relative;
+  top: 10px;
+  left: 60px;
+}
+
+.play_button {
+  display: 'none';
+  width: 500px;
+  height: 50px;
+  background: -webkit-gradient(linear, left top, right top, from(#f1f38a), to(#f34343));
+  background: linear-gradient(to right, #f1f38a 0%, #f34343 100%);
+  border: 2px solid gray;
+  border-radius: 10px;
+  color: white;
+  font-size: 30px;
+  font-family: Arial, Helvetica, serif;
+  margin-bottom: 30px;
+  margin-left: 400px;
+  margin-right: 400px;
+  text-align: center;
+}
+
+.retry {
+  width: 40px;
+}
+
+#result {
+  height: 50px;
+  display: 'none';
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#result div {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes square_button {
+  from {
+    -webkit-box-shadow: 0px 15px 20px white;
+            box-shadow: 0px 15px 20px white;
+  }
+  to {
+    -webkit-box-shadow: 0px 15px 20px gray;
+            box-shadow: 0px 15px 20px gray;
+  }
+}
+
+@keyframes square_button {
+  from {
+    -webkit-box-shadow: 0px 15px 20px white;
+            box-shadow: 0px 15px 20px white;
+  }
+  to {
+    -webkit-box-shadow: 0px 15px 20px gray;
+            box-shadow: 0px 15px 20px gray;
+  }
+}
+
+@-webkit-keyframes menu_button {
+  from {
+    background-image: url("./images/menu-icon.png");
+  }
+  to {
+    background-image: url("./images/x-icon.png");
+  }
+}
+
+@keyframes menu_button {
+  from {
+    background-image: url("./images/menu-icon.png");
+  }
+  to {
+    background-image: url("./images/x-icon.png");
+  }
+}
+
+@-webkit-keyframes menu_button_back {
+  from {
+    background-image: url("./images/x-icon.png");
+  }
+  to {
+    background-image: url("./images/menu-icon.png");
+  }
+}
+
+@keyframes menu_button_back {
+  from {
+    background-image: url("./images/x-icon.png");
+  }
+  to {
+    background-image: url("./images/menu-icon.png");
+  }
+}
+/*# sourceMappingURL=style.css.map */

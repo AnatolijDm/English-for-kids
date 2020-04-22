@@ -1,0 +1,179 @@
+.wrapper {
+    max-width: 1080px;
+    margin: auto;  
+}
+
+header {
+    height: 50px;
+}
+
+.menu {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu_icon {
+    width: 35px;
+    height: 35px;
+    z-index: 4;
+    background-image: url('./images/menu-icon.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.play_box {
+    width: 100px;
+    height: 40px;
+    border: 3px solid rgb(150, 148, 148);
+    border-radius: 10%;
+    background: linear-gradient(to right, #29ac6f 0%, #178686 100%);
+    color: white;
+    font-size: 17px;
+    font-family: Arial, Helvetica, serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 5px;
+}
+
+.play_box__button {
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgb(231, 228, 228);
+    border-radius: 15%;
+}
+
+.play-train {
+    text-decoration: none;
+}
+
+.blocks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.blocks>a:nth-child(1)>p {
+    color: red;
+}
+
+.blocks__square {
+    width: 305px;
+    height: 60px;
+    border: 1px solid rgb(214, 210, 210);
+    border-radius: 3%;
+    margin: 20px 25px;
+    text-align: center;
+    padding-top: 215px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, serif;
+    text-decoration: none;
+    color: black;
+    background: linear-gradient(to top, #f1f38a 0%, #f34343 100%);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 305px 225px;
+    z-index: 1;
+}
+
+.blocks__square:hover {
+    animation: square_button 1s;
+    box-shadow: 0px 15px 20px gray;
+}
+
+.hidden_menu {
+    margin-top: -86px;
+    padding-top: 120px;
+    padding-bottom: 50px;
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    height: 600px;
+    flex-direction: column;
+    border: 1px solid green;
+    background: linear-gradient(to right, #29ac6f 0%, #178686 100%);
+    z-index: 3;
+}
+
+.hidden_menu a {
+    font-size: 20px;
+    font-family: Arial, Helvetica, serif;
+    text-decoration: none;
+    color: white;
+}
+
+.hidden_menu .active {
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.rotate {
+    display: inline-block;
+    width: 40px;
+    position: relative;
+    top: 10px;
+    left: 60px;
+}
+
+.play_button {
+    display: 'none';
+    width: 500px;
+    height: 50px;
+    background: linear-gradient(to right, #f1f38a 0%, #f34343 100%);
+    border: 2px solid gray;
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+    font-family: Arial, Helvetica, serif;
+    margin-bottom: 30px;
+    margin-left: 400px;
+    margin-right: 400px;
+    text-align: center;
+}
+
+.retry {
+    width: 40px;
+}
+
+#result {
+    height: 50px;
+    display: 'none';
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#result div {
+    justify-content: flex-end;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+@keyframes square_button {
+    from {box-shadow: 0px 15px 20px white;}
+    to {box-shadow: 0px 15px 20px gray;}
+  }
+
+  @keyframes menu_button {
+    from {background-image: url('./images/menu-icon.png')}
+    to {background-image: url('./images/x-icon.png')}
+  }
+
+  @keyframes menu_button_back {
+    from {background-image: url('./images/x-icon.png')}
+    to {background-image: url('./images/menu-icon.png')}
+  }
